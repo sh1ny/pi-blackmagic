@@ -1,0 +1,39 @@
+[tools]
+bun = "1.4.2"
+node = "24.21.0"
+
+[tasks.setup]
+description = "Install the exact workspace dependencies from bun.lock"
+run = "bun install --frozen-lockfile"
+
+[tasks."fmt:check"]
+description = "Check formatting without changing files"
+run = "bun run fmt:check"
+
+[tasks."fmt:fix"]
+description = "Explicitly apply formatting fixes"
+run = "bun run fmt:fix"
+
+[tasks.lint]
+description = "Check lint without changing files"
+run = "bun run lint"
+
+[tasks.typecheck]
+description = "Check TypeScript without emitting files"
+run = "bun run typecheck"
+
+[tasks.test]
+description = "Run credential-free scaffold tests"
+run = "bun run test"
+
+[tasks.check]
+description = "Run read-only formatting, lint, types, and tests"
+depends = ["fmt:check", "lint", "typecheck", "test"]
+
+[tasks."dev:pi-settings"]
+description = "Launch Pi with only the standalone pi-settings extension"
+run = "bun run scripts/dev-pi.ts pi-settings"
+
+[tasks."dev:suite"]
+description = "Launch Pi with only the Blackmagic suite"
+run = "bun run scripts/dev-pi.ts suite"

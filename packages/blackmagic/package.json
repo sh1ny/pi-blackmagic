@@ -1,0 +1,27 @@
+{
+  "name": "pi-blackmagic",
+  "version": "0.1.0",
+  "keywords": [
+    "pi-package"
+  ],
+  "description": "A thin Pi extension suite scaffold composing pi-settings.",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "files": [
+    "src",
+    "README.md"
+  ],
+  "pi": {
+    "extensions": [
+      "./src/index.ts"
+    ]
+  },
+  "dependencies": {
+    "@pi-blackmagic/pi-settings": "workspace:*"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  }
+}

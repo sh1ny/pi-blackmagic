@@ -1,0 +1,24 @@
+{
+  "native": {
+    "theme": "system",
+    "futureNative": { "enabled": true },
+    "trackingId": "synthetic-bookkeeping"
+  },
+  "keybindings": { "app.future.action": ["ctrl+f12"] },
+  "mcp": {
+    "futureRoot": true,
+    "mcpServers": {
+      "synthetic": { "command": "synthetic", "futureTransportOption": 42 }
+    }
+  },
+  "models": {
+    "futureRoot": true,
+    "providers": {
+      "synthetic": {
+        "baseUrl": "https://example.invalid",
+        "futureProviderMetadata": true,
+        "models": [{ "id": "synthetic", "futureModelMetadata": "preserve" }]
+      }
+    }
+  }
+}

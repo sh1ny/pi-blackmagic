@@ -1,0 +1,19 @@
+node_modules/
+dist/
+coverage/
+.cache/
+*.tsbuildinfo
+*.tgz
+
+# Local agent session state (not project configuration)
+.pi/tasks/
+.pi/sessions/
+.omp/tasks/
+.omp/sessions/
+
+# Local credentials and environment overrides
+.env
+.env.*
+!.env.example
+*.pem
+*.key

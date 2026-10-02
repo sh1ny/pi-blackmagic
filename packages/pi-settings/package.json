@@ -1,0 +1,31 @@
+{
+  "name": "@pi-blackmagic/pi-settings",
+  "version": "0.1.0",
+  "keywords": [
+    "pi-package"
+  ],
+  "description": "An inert Pi settings extension scaffold.",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./registration": "./src/registration.ts"
+  },
+  "files": [
+    "src",
+    "README.md",
+    "docs"
+  ],
+  "pi": {
+    "extensions": [
+      "./src/index.ts"
+    ]
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "~0.99.1",
+    "@earendil-works/pi-tui": "~0.99.1"
+  },
+  "dependencies": {
+    "hosted-git-info": "9.0.3",
+    "proper-lockfile": "4.1.2"
+  }
+}
